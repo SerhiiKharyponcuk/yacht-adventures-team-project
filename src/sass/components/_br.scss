@@ -1,0 +1,21 @@
+br {
+    display: none;
+}
+
+.br--m {
+    @media screen and ((max-width: calc(getBreakPoint(tablet) - 0.1px))) {
+        display: block;
+    }
+}
+
+.br--t {
+    @media screen and ((max-width: calc(getBreakPoint(desktop) - 0.1px)) and (min-width: getBreakPoint(tablet))) {
+        display: block;
+    }
+}
+
+.br--d {
+    @media screen and (min-width: getBreakPoint(desktop)) {
+        display: block;
+    }
+}
