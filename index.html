@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/yacht-adventures-team-project/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/yacht-adventures-team-project/assets/fontisto_yacht-logo-3cbf83bf.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yacht Adventures</title>
   <!--! Спочатку нормалізатор -->
@@ -17,19 +17,737 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap" rel="stylesheet">
 
   
-  <script type="module" crossorigin src="/yacht-adventures-team-project/assets/index-5d5dbf4c.js"></script>
-  <link rel="stylesheet" href="/yacht-adventures-team-project/assets/index-79dd5afd.css">
+  <script type="module" crossorigin src="/yacht-adventures-team-project/assets/index-c9b24eb1.js"></script>
+  <link rel="stylesheet" href="/yacht-adventures-team-project/assets/index-30b3b005.css">
 </head>
 
 <body>
+<div id="loader" class="loader">
+  <div class="loader-bg"></div>
+
+  <div class="loader-content">
+    <img class="wheel" src="/yacht-adventures-team-project/assets/wheel-18ec82d7.png" alt="Wheel"/>
+
+    <h1 class="loader-title">Yacht Adventures</h1>
+
+    <img class="boat" src="/yacht-adventures-team-project/assets/yacht-1ec5ebe1.png" alt="Yacht"/>
+  </div>
+</div>
+
+
+
+  
   <!-- Loads the specified .html file -->
   <header>
-  
+  <div class="header__inner container">
+    <!-- Logo -->
+    <a href="./index.html" class="logo">
+        <img src="./images/logo-yacht.svg" alt="Yacht Adventures logo" class="logo__icon" />
+        <span class="logo__text">YACHT ADVENTURES</span>
+    </a>
+
+    <!-- Desktop / tablet navigation -->
+    <nav class="nav" aria-label="Primary navigation">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a href="#about" class="nav__link">ABOUT</a>
+            </li>
+            <li class="nav__item">
+                <a href="#yachts" class="nav__link">YACHTS</a>
+            </li>
+            <li class="nav__item">
+                <a href="#reviews" class="nav__link">REVIEWS</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Burger button for tablet / mobile -->
+    <button class="burger" type="button" aria-label="Open navigation menu" aria-expanded="false"
+        aria-controls="mobile-menu">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+    </button>
+</div>
+
+<!-- Thin divider line under header -->
+<span class="header__divider" aria-hidden="true"></span>
+
+<!-- Mobile menu overlay -->
+<div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="mobile-menu__top">
+        <a href="./index.html" class="logo mobile-menu__logo">
+            <img src="./images/logo-yacht.svg" alt="Yacht Adventures logo" class="logo__icon" />
+            <span class="logo__text">YACHT ADVENTURES</span>
+        </a>
+
+        <button class="mobile-menu__close" type="button" aria-label="Close navigation menu">
+            <span class="mobile-menu__close-line"></span>
+            <span class="mobile-menu__close-line"></span>
+        </button>
+    </div>
+
+    <span class="mobile-menu__divider" aria-hidden="true"></span>
+
+    <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+        <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+                <a href="#about" class="mobile-menu__link">ABOUT</a>
+            </li>
+            <li class="mobile-menu__item">
+                <a href="#yachts" class="mobile-menu__link">YACHTS</a>
+            </li>
+            <li class="mobile-menu__item">
+                <a href="#reviews" class="mobile-menu__link">REVIEWS</a>
+            </li>
+        </ul>
+    </nav>
+</div>
   </header>
   <main>
-  
-  
-  
+  <section class="hero">
+    <div class="hero__inner container">
+
+        <!-- LEFT VISUAL -->
+        <div class="hero__visual">
+
+            <!-- Yacht card -->
+            <div class="hero-card">
+
+                <!-- Clients block -->
+                <div class="hero-card__clients">
+                    <p class="hero-card__label">OUR CLIENTS</p>
+
+                    <ul class="hero-card__avatars">
+                        <li class="hero-card__avatar">
+                            <img src="./images/clients/client-1@1x.jpg" srcset="./images/clients/client-1@1x.jpg 1x,
+                        ./images/clients/client-1@2x.jpg 2x" alt="Client 1">
+                        </li>
+
+                        <li class="hero-card__avatar">
+                            <img src="./images/clients/client-2@1x.jpg" srcset="./images/clients/client-2@1x.jpg 1x,
+                        ./images/clients/client-2@2x.jpg 2x" alt="Client 2">
+                        </li>
+
+                        <li class="hero-card__avatar">
+                            <img src="./images/clients/client-3@1x.jpg" srcset="./images/clients/client-3@1x.jpg 1x,
+                        ./images/clients/client-3@2x.jpg 2x" alt="Client 3">
+                        </li>
+                    </ul>
+                </div>
+
+
+                <!-- Yacht image -->
+                <picture class="hero-card__image">
+
+                    <!-- Desktop -->
+                    <source media="(min-width:1200px)" srcset="
+              ./images/hero/yacht-desktop@1x.png 1x,
+              ./images/hero/yacht-desktop@2x.png 2x
+            ">
+
+                    <!-- Tablet -->
+                    <source media="(min-width:768px)" srcset="
+              ./images/hero/yacht-tablet@1x.png 1x,
+              ./images/hero/yacht-tablet@2x.png 2x
+            ">
+
+                    <!-- Mobile -->
+                    <source media="(max-width:767px)" srcset="
+              ./images/hero/yacht-mobile@1x.png 1x,
+              ./images/hero/yacht-mobile@2x.png 2x
+            ">
+
+                    <img src="./images/hero/yacht-mobile@1x.png" alt="Luxury yacht" loading="lazy">
+
+                </picture>
+
+
+                <!-- Price -->
+                <div class="hero-card__price">
+                    <span class="hero-card__price-value">$12M</span>
+
+                    <p class="hero-card__price-text">
+                        Book now and make your dream yacht rental a reality
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- Floating client photo -->
+            <picture class="hero-photo">
+
+                <!-- Desktop -->
+                <source media="(min-width:1200px)" srcset="
+            ./images/hero/client-desktop@1x.jpg 1x,
+            ./images/hero/client-desktop@2x.jpg 2x
+          ">
+
+                <!-- Tablet -->
+                <source media="(min-width:768px)" srcset="
+            ./images/hero/client-tablet@1x.jpg 1x,
+            ./images/hero/client-tablet@2x.jpg 2x
+          ">
+
+                <!-- Mobile -->
+                <source media="(max-width:767px)" srcset="
+            ./images/hero/client-mobile@1x.jpg 1x,
+            ./images/hero/client-mobile@2x.jpg 2x
+          ">
+
+                <img src="./images/hero/client-mobile@1x.jpg" alt="Satisfied client" loading="lazy">
+
+            </picture>
+
+        </div>
+
+
+
+        <!-- RIGHT CONTENT -->
+        <div class="hero__content">
+
+            <h1 class="hero__title">
+                Explore the High Seas with
+                <span class="hero__title-accent">
+                    Our Luxury Yacht Rentals
+                </span>
+            </h1>
+
+            <p class="hero__text">
+                Experience the freedom and luxury of yachting on the open seas.
+                Choose from our top-of-the-line yachts and embark on an unforgettable
+                journey surrounded by breathtaking views and state-of-the-art amenities.
+            </p>
+
+            <div class="hero__actions">
+                <a href="#get-started" class="btn btn--primary">
+                    Get Started
+                </a>
+
+                <a href="#explore" class="btn btn--outline">
+                    Explore
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+  <section class="choose">
+    <div class="choose__inner container">
+
+        <!-- TEXT BLOCK -->
+        <div class="choose__text">
+
+            <p class="choose__intro">
+                Yacht Adventures fleet is here to take you on the ultimate adventure.
+                Each yacht is hand-picked for its comfort, style, and performance.
+            </p>
+
+            <div class="choose__features">
+
+                <ul class="choose__list">
+                    <li class="choose__item">
+                        From intimate getaways to social cruises, our yachts cater to all
+                        experiences and group sizes.
+                    </li>
+                    <li class="choose__item">
+                        Travel in elegance with meticulously designed interiors and exteriors.
+                    </li>
+                    <li class="choose__item">
+                        Our fleet meets the highest standards of luxury and safety.
+                    </li>
+                </ul>
+
+                <ul class="choose__list">
+                    <li class="choose__item">
+                        Equipped with modern navigation systems and premium amenities.
+                    </li>
+                    <li class="choose__item">
+                        Spacious decks, plush seating, and panoramic views.
+                    </li>
+                    <li class="choose__item">
+                        Professional crews ensure a seamless yachting experience.
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- IMAGES GRID -->
+        <div class="choose__gallery">
+
+            <!-- MAIN IMAGE -->
+            <picture class="choose__image choose__image--large">
+
+                <!-- Desktop -->
+                <source media="(min-width:1200px)" srcset="
+            ./images/choose/main-desktop@1x.jpg 1x,
+            ./images/choose/main-desktop@2x.jpg 2x
+          ">
+
+                <!-- Tablet -->
+                <source media="(min-width:768px)" srcset="
+            ./images/choose/main-tablet@1x.jpg 1x,
+            ./images/choose/main-tablet@2x.jpg 2x
+          ">
+
+                <!-- Mobile -->
+                <source media="(max-width:767px)" srcset="
+            ./images/choose/main-mobile@1x.jpg 1x,
+            ./images/choose/main-mobile@2x.jpg 2x
+          ">
+
+                <img src="./images/choose/main-mobile@1x.jpg" alt="Luxury yacht deck" loading="lazy">
+            </picture>
+
+
+            <!-- SMALL IMAGE 1 -->
+            <picture class="choose__image choose__image--small">
+
+                <!-- Desktop -->
+                <source media="(min-width:1200px)" srcset="
+            ./images/choose/small-1-desktop@1x.jpg 1x,
+            ./images/choose/small-1-desktop@2x.jpg 2x
+          ">
+
+                <!-- Tablet -->
+                <source media="(min-width:768px)" srcset="
+            ./images/choose/small-1-tablet@1x.jpg 1x,
+            ./images/choose/small-1-tablet@2x.jpg 2x
+          ">
+
+                <!-- Mobile -->
+                <source media="(max-width:767px)" srcset="
+            ./images/choose/small-1-mobile@1x.jpg 1x,
+            ./images/choose/small-1-mobile@2x.jpg 2x
+          ">
+
+                <img src="./images/choose/small-1-mobile@1x.jpg" alt="Luxury yacht interior" loading="lazy">
+
+            </picture>
+
+
+            <!-- SMALL IMAGE 2 -->
+            <picture class="choose__image choose__image--small">
+
+                <!-- Desktop -->
+                <source media="(min-width:1200px)" srcset="
+            ./images/choose/small-2-desktop@1x.jpg 1x,
+            ./images/choose/small-2-desktop@2x.jpg 2x
+          ">
+
+                <!-- Tablet -->
+                <source media="(min-width:768px)" srcset="
+            ./images/choose/small-2-tablet@1x.jpg 1x,
+            ./images/choose/small-2-tablet@2x.jpg 2x
+          ">
+
+                <!-- Mobile -->
+                <source media="(max-width:767px)" srcset="
+            ./images/choose/small-2-mobile@1x.jpg 1x,
+            ./images/choose/small-2-mobile@2x.jpg 2x
+          ">
+
+                <img src="./images/choose/small-2-mobile@1x.jpg" alt="Luxury yacht sailing" loading="lazy">
+
+            </picture>
+
+        </div>
+
+
+        <!-- TITLE + CTA -->
+        <div class="choose__cta">
+
+            <h2 class="choose__title">
+                Choose your dream yacht and sail away into the sunset
+            </h2>
+
+            <a href="#book" class="btn btn--outline choose__btn">
+                Yacht rental
+            </a>
+
+        </div>
+
+    </div>
+</section>
+  <section class="yachts">
+    <div class="yachts__inner container">
+
+        <div class="yachts__header">
+            <h2 class="yachts__title">Yachts</h2>
+
+            <div class="yachts__controls">
+                <button class="slider-btn slider-btn--prev" type="button" aria-label="Previous">‹</button>
+                <button class="slider-btn slider-btn--next" type="button" aria-label="Next">›</button>
+            </div>
+        </div>
+
+
+        <div class="slider">
+            <ul class="slider__track">
+
+                <!-- 1 -->
+                <li class="slider__slide">
+                    <article class="yacht-card">
+
+                        <picture class="yacht-card__image">
+                            <source media="(min-width:1200px)"
+                                srcset="./images/yachts/arrow-desktop@1x.jpg 1x, ./images/yachts/arrow-desktop@2x.jpg 2x">
+                            <source media="(min-width:768px)"
+                                srcset="./images/yachts/arrow-tablet@1x.jpg 1x, ./images/yachts/arrow-tablet@2x.jpg 2x">
+                            <source media="(max-width:767px)"
+                                srcset="./images/yachts/arrow-mobile@1x.jpg 1x, ./images/yachts/arrow-mobile@2x.jpg 2x">
+                            <img src="./images/yachts/arrow-mobile@1x.jpg" alt="Arrow yacht">
+                        </picture>
+
+                        <div class="yacht-card__body">
+                            <div class="yacht-card__top">
+                                <h3 class="yacht-card__name">Arrow</h3>
+                                <span class="yacht-card__category">Luxury Yachts</span>
+                            </div>
+
+                            <dl class="yacht-card__specs">
+                                <div>
+                                    <dt>Length</dt>
+                                    <dd>48m</dd>
+                                </div>
+                                <div>
+                                    <dt>Builder</dt>
+                                    <dd>Admiral</dd>
+                                </div>
+                                <div>
+                                    <dt>Built</dt>
+                                    <dd>2023</dd>
+                                </div>
+                                <div>
+                                    <dt>Guests</dt>
+                                    <dd>10 cabins</dd>
+                                </div>
+                            </dl>
+
+                            <div class="yacht-card__price">€350,000</div>
+                        </div>
+
+                    </article>
+                </li>
+
+                <!-- 2 -->
+                <li class="slider__slide">
+                    <article class="yacht-card">
+                        <picture class="yacht-card__image">
+                            <source media="(min-width:1200px)"
+                                srcset="./images/yachts/benedetta-desktop@1x.jpg 1x, ./images/yachts/benedetta-desktop@2x.jpg 2x">
+                            <source media="(min-width:768px)"
+                                srcset="./images/yachts/benedetta-tablet@1x.jpg 1x, ./images/yachts/benedetta-tablet@2x.jpg 2x">
+                            <source media="(max-width:767px)"
+                                srcset="./images/yachts/benedetta-mobile@1x.jpg 1x, ./images/yachts/benedetta-mobile@2x.jpg 2x">
+                            <img src="./images/yachts/benedetta-mobile@1x.jpg" alt="Benedetta yacht">
+                        </picture>
+
+                        <div class="yacht-card__body">
+                            <div class="yacht-card__top">
+                                <h3 class="yacht-card__name">Benedetta</h3>
+                                <span class="yacht-card__category">Luxury Yachts</span>
+                            </div>
+
+                            <dl class="yacht-card__specs">
+                                <div>
+                                    <dt>Length</dt>
+                                    <dd>40m</dd>
+                                </div>
+                                <div>
+                                    <dt>Built</dt>
+                                    <dd>2022</dd>
+                                </div>
+                                <div>
+                                    <dt>Guests</dt>
+                                    <dd>10 cabins</dd>
+                                </div>
+                            </dl>
+
+                            <div class="yacht-card__price">€320,000</div>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- 3 -->
+                <li class="slider__slide">
+                    <article class="yacht-card">
+                        <picture class="yacht-card__image">
+                            <source media="(min-width:1200px)"
+                                srcset="./images/yachts/belle-desktop@1x.jpg 1x, ./images/yachts/belle-desktop@2x.jpg 2x">
+                            <source media="(min-width:768px)"
+                                srcset="./images/yachts/belle-tablet@1x.jpg 1x, ./images/yachts/belle-tablet@2x.jpg 2x">
+                            <source media="(max-width:767px)"
+                                srcset="./images/yachts/belle-mobile@1x.jpg 1x, ./images/yachts/belle-mobile@2x.jpg 2x">
+                            <img src="./images/yachts/belle-mobile@1x.jpg" alt="Belle Anna yacht">
+                        </picture>
+
+                        <div class="yacht-card__body">
+                            <div class="yacht-card__top">
+                                <h3 class="yacht-card__name">Belle Anna</h3>
+                                <span class="yacht-card__category">Luxury Yachts</span>
+                            </div>
+
+                            <dl class="yacht-card__specs">
+                                <div>
+                                    <dt>Length</dt>
+                                    <dd>50m</dd>
+                                </div>
+                                <div>
+                                    <dt>Guests</dt>
+                                    <dd>12 cabins</dd>
+                                </div>
+                            </dl>
+
+                            <div class="yacht-card__price">€420,000</div>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- 4 -->
+                <li class="slider__slide">
+                    <article class="yacht-card">
+                        <picture class="yacht-card__image">
+                            <source media="(min-width:1200px)"
+                                srcset="./images/yachts/ellen-desktop@1x.jpg 1x, ./images/yachts/ellen-desktop@2x.jpg 2x">
+                            <source media="(min-width:768px)"
+                                srcset="./images/yachts/ellen-tablet@1x.jpg 1x, ./images/yachts/ellen-tablet@2x.jpg 2x">
+                            <source media="(max-width:767px)"
+                                srcset="./images/yachts/ellen-mobile@1x.jpg 1x, ./images/yachts/ellen-mobile@2x.jpg 2x">
+                            <img src="./images/yachts/ellen-mobile@1x.jpg" alt="Ellen yacht">
+                        </picture>
+
+                        <div class="yacht-card__body">
+                            <div class="yacht-card__top">
+                                <h3 class="yacht-card__name">Ellen</h3>
+                                <span class="yacht-card__category">Luxury Yachts</span>
+                            </div>
+
+                            <dl class="yacht-card__specs">
+                                <div>
+                                    <dt>Length</dt>
+                                    <dd>25m</dd>
+                                </div>
+                                <div>
+                                    <dt>Built</dt>
+                                    <dd>2017</dd>
+                                </div>
+                                <div>
+                                    <dt>Guests</dt>
+                                    <dd>6 cabins</dd>
+                                </div>
+                            </dl>
+
+                            <div class="yacht-card__price">€150,000</div>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- 5 -->
+                <li class="slider__slide">
+                    <article class="yacht-card">
+                        <picture class="yacht-card__image">
+                            <source media="(min-width:1200px)"
+                                srcset="./images/yachts/mirage-desktop@1x.jpg 1x, ./images/yachts/mirage-desktop@2x.jpg 2x">
+                            <source media="(min-width:768px)"
+                                srcset="./images/yachts/mirage-tablet@1x.jpg 1x, ./images/yachts/mirage-tablet@2x.jpg 2x">
+                            <source media="(max-width:767px)"
+                                srcset="./images/yachts/mirage-mobile@1x.jpg 1x, ./images/yachts/mirage-mobile@2x.jpg 2x">
+                            <img src="./images/yachts/mirage-mobile@1x.jpg" alt="Mirage yacht">
+                        </picture>
+
+                        <div class="yacht-card__body">
+                            <div class="yacht-card__top">
+                                <h3 class="yacht-card__name">Mirage 401</h3>
+                                <span class="yacht-card__category">Luxury Yachts</span>
+                            </div>
+
+                            <dl class="yacht-card__specs">
+                                <div>
+                                    <dt>Length</dt>
+                                    <dd>35m</dd>
+                                </div>
+                                <div>
+                                    <dt>Built</dt>
+                                    <dd>2019</dd>
+                                </div>
+                                <div>
+                                    <dt>Guests</dt>
+                                    <dd>8 cabins</dd>
+                                </div>
+                            </dl>
+
+                            <div class="yacht-card__price">€275,000</div>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- 6 -->
+                <li class="slider__slide">
+                    <article class="yacht-card">
+                        <picture class="yacht-card__image">
+                            <source media="(min-width:1200px)"
+                                srcset="./images/yachts/king-desktop@1x.jpg 1x, ./images/yachts/king-desktop@2x.jpg 2x">
+                            <source media="(min-width:768px)"
+                                srcset="./images/yachts/king-tablet@1x.jpg 1x, ./images/yachts/king-tablet@2x.jpg 2x">
+                            <source media="(max-width:767px)"
+                                srcset="./images/yachts/king-mobile@1x.jpg 1x, ./images/yachts/king-mobile@2x.jpg 2x">
+                            <img src="./images/yachts/king-mobile@1x.jpg" alt="King yacht">
+                        </picture>
+
+                        <div class="yacht-card__body">
+                            <div class="yacht-card__top">
+                                <h3 class="yacht-card__name">King</h3>
+                                <span class="yacht-card__category">Luxury Yachts</span>
+                            </div>
+
+                            <dl class="yacht-card__specs">
+                                <div>
+                                    <dt>Length</dt>
+                                    <dd>33m</dd>
+                                </div>
+                                <div>
+                                    <dt>Built</dt>
+                                    <dd>2020</dd>
+                                </div>
+                                <div>
+                                    <dt>Guests</dt>
+                                    <dd>8 cabins</dd>
+                                </div>
+                            </dl>
+
+                            <div class="yacht-card__price">€250,000</div>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- 7 -->
+                <li class="slider__slide">
+                    <article class="yacht-card">
+                        <picture class="yacht-card__image">
+                            <source media="(min-width:1200px)"
+                                srcset="./images/yachts/salt-desktop@1x.jpg 1x, ./images/yachts/salt-desktop@2x.jpg 2x">
+                            <source media="(min-width:768px)"
+                                srcset="./images/yachts/salt-tablet@1x.jpg 1x, ./images/yachts/salt-tablet@2x.jpg 2x">
+                            <source media="(max-width:767px)"
+                                srcset="./images/yachts/salt-mobile@1x.jpg 1x, ./images/yachts/salt-mobile@2x.jpg 2x">
+                            <img src="./images/yachts/salt-mobile@1x.jpg" alt="Salt yacht">
+                        </picture>
+
+                        <div class="yacht-card__body">
+                            <div class="yacht-card__top">
+                                <h3 class="yacht-card__name">Salt</h3>
+                                <span class="yacht-card__category">Luxury Yachts</span>
+                            </div>
+
+                            <dl class="yacht-card__specs">
+                                <div>
+                                    <dt>Length</dt>
+                                    <dd>32m</dd>
+                                </div>
+                                <div>
+                                    <dt>Built</dt>
+                                    <dd>2018</dd>
+                                </div>
+                                <div>
+                                    <dt>Guests</dt>
+                                    <dd>10 cabins</dd>
+                                </div>
+                            </dl>
+
+                            <div class="yacht-card__price">€225,000</div>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- 8 -->
+                <li class="slider__slide">
+                    <article class="yacht-card">
+                        <picture class="yacht-card__image">
+                            <source media="(min-width:1200px)"
+                                srcset="./images/yachts/storm-desktop@1x.jpg 1x, ./images/yachts/storm-desktop@2x.jpg 2x">
+                            <source media="(min-width:768px)"
+                                srcset="./images/yachts/storm-tablet@1x.jpg 1x, ./images/yachts/storm-tablet@2x.jpg 2x">
+                            <source media="(max-width:767px)"
+                                srcset="./images/yachts/storm-mobile@1x.jpg 1x, ./images/yachts/storm-mobile@2x.jpg 2x">
+                            <img src="./images/yachts/storm-mobile@1x.jpg" alt="Storm yacht">
+                        </picture>
+
+                        <div class="yacht-card__body">
+                            <div class="yacht-card__top">
+                                <h3 class="yacht-card__name">Storm</h3>
+                                <span class="yacht-card__category">Luxury Yachts</span>
+                            </div>
+
+                            <dl class="yacht-card__specs">
+                                <div>
+                                    <dt>Length</dt>
+                                    <dd>32m</dd>
+                                </div>
+                                <div>
+                                    <dt>Built</dt>
+                                    <dd>2016</dd>
+                                </div>
+                                <div>
+                                    <dt>Guests</dt>
+                                    <dd>10 cabins</dd>
+                                </div>
+                            </dl>
+
+                            <div class="yacht-card__price">€210,000</div>
+                        </div>
+                    </article>
+                </li>
+
+                <!-- 9 -->
+                <li class="slider__slide">
+                    <article class="yacht-card">
+                        <picture class="yacht-card__image">
+                            <source media="(min-width:1200px)"
+                                srcset="./images/yachts/collu-desktop@1x.jpg 1x, ./images/yachts/collu-desktop@2x.jpg 2x">
+                            <source media="(min-width:768px)"
+                                srcset="./images/yachts/collu-tablet@1x.jpg 1x, ./images/yachts/collu-tablet@2x.jpg 2x">
+                            <source media="(max-width:767px)"
+                                srcset="./images/yachts/collu-mobile@1x.jpg 1x, ./images/yachts/collu-mobile@2x.jpg 2x">
+                            <img src="./images/yachts/collu-mobile@1x.jpg" alt="Collu yacht">
+                        </picture>
+
+                        <div class="yacht-card__body">
+                            <div class="yacht-card__top">
+                                <h3 class="yacht-card__name">Collu</h3>
+                                <span class="yacht-card__category">Luxury Yachts</span>
+                            </div>
+
+                            <dl class="yacht-card__specs">
+                                <div>
+                                    <dt>Length</dt>
+                                    <dd>29m</dd>
+                                </div>
+                                <div>
+                                    <dt>Built</dt>
+                                    <dd>2014</dd>
+                                </div>
+                                <div>
+                                    <dt>Guests</dt>
+                                    <dd>8 cabins</dd>
+                                </div>
+                            </dl>
+
+                            <div class="yacht-card__price">€195,000</div>
+                        </div>
+                    </article>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</section>
   <section class="gallery">
     <div class="gallery__circle"></div>
     <div class="container">
@@ -221,5 +939,6 @@
 
   
 </body>
+
 
 </html>
