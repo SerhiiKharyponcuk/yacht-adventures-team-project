@@ -1,0 +1,179 @@
+.rent {
+    padding-bottom: 80px;
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+        padding-bottom: 100px;
+    }
+
+    @media screen and (min-width: getBreakPoint(desktop)) {
+        padding-bottom: 164px;
+    }
+
+    .container {
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            display: flex;
+            gap: 69px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            padding: 0 184px;
+            gap: 188px;
+        }
+    }
+
+    &__title-content {
+        margin-bottom: 40px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            width: 271px;
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 110%;
+        letter-spacing: -0.04em;
+        margin-bottom: 16px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            font-size: 60px;
+            margin-bottom: 32px;
+        }
+    }
+
+    .rent-form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            flex-grow: 1;
+            margin-top: 15px;
+        }
+
+        &__label {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 120%;
+            letter-spacing: -0.04em;
+        }
+
+        &__input {
+            background-color: get-var(main__first);
+            color: get-var(light__third);
+        }
+
+        &__textarea {
+            background-color: get-var(main__first);
+            resize: none;
+            border: none;
+            color: get-var(light__third);
+        }
+
+        &__label::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            background-color: get-var(light__third);
+            bottom: 0;
+            left: 0;
+        }
+
+        &__button {
+            @include button(123px, 43px);
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                @include button(132px, 48px);
+            }
+        }
+    }
+
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        @include multi-transition(background-color);
+    }
+
+    .modal-overlay.active {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-overlay.active .modal {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .modal {
+        position: relative;
+        width: 335px;
+        background: get-var(main__first);
+        padding: 40px 24px;
+        border-radius: 20px;
+        opacity: 0;
+        transform: translateY(20px);
+        @include multi-transition((opacity, transform));
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            width: 570px;
+            padding: 64px;
+        }
+
+        &__title {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 120%;
+            letter-spacing: -0.04em;
+            margin-bottom: 14px;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                font-size: 32px;
+                margin-bottom: 16px;
+            }
+        }
+
+        &__description {
+            font-size: 14px;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                font-size: 16px;
+            }
+        }
+
+        &__close {
+            position: absolute;
+            right: 14px;
+            top: 14px;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                right: 32px;
+                top: 32px;
+            }
+        }
+
+        &__picture {
+            display: block;
+            margin-bottom: 24px;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                width: 338px;
+                margin: 0 auto;
+                margin-bottom: 21px;
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+body {
+    font-family: $family;
+    background-color: get-var(main__first);
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    color: get-var(light__third);
+}
