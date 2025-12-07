@@ -1,0 +1,80 @@
+.gallery {
+    padding-bottom: 80px;
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+        padding-bottom: 100px;
+    }
+
+    @media screen and (min-width: getBreakPoint(desktop)) {
+        padding-bottom: 164px;
+    }
+
+    .gallery-list {
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            gap: 32px;
+            align-items: start;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            gap: 64px;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        &__picture {
+            position: relative;
+
+            &--1 {
+                @media screen and (min-width: getBreakPoint(desktop)) {
+                    max-width: 712px;
+                }
+            }
+
+            &--2 {
+                @media screen and (min-width: getBreakPoint(tablet)) {
+                    margin-left: 304px;
+                }
+
+                @media screen and (min-width: getBreakPoint(desktop)) {
+                    margin-left: 0;
+                    margin-top: 200px;
+                }
+            }
+
+            &--3 {
+                @media screen and (min-width: getBreakPoint(tablet)) {
+                    margin-left: 32px;
+                }
+
+                @media screen and (min-width: getBreakPoint(desktop)) {
+                    margin-left: 340px;
+                }
+            }
+        }
+
+        &__name {
+            position: absolute;
+            border-radius: 60px;
+            padding: 14px 28px;
+            height: 43px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 110%;
+            letter-spacing: -0.04em;
+            background-color: get-var(light__third);
+            color: get-var(main__first);
+            bottom: 24px;
+            left: 24px;
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                bottom: 32px;
+                left: 32px;
+            }
+        }
+    }
+}

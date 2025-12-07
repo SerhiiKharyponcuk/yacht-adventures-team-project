@@ -15,28 +15,31 @@
 transition: $transitions;
 }
 
-// @mixin button($w, $h, $f: 16px, $r: 5px) {
-//     border-radius: $r;
-//     width: $w;
-//     height: $h;
-//     background: get-var(main__second);
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     font-weight: 500;
-//     text-align: center;
-//     font-size: $f;
-//     color: get-var(light__first);
-//     cursor: pointer;
-//     @include multi-transition((transform, color, background-color));
+@mixin button($w, $h, $f: 16px, $r: 60px) {
+    border-radius: $r;
+    width: $w;
+    height: $h;
+    background: get-var(main__first);
+    padding: 14px 28px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 5px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 110%;
+    letter-spacing: -0.04em;
+    text-align: center;
+    font-size: $f;
+    fill: get-var(light__third);
+    color: get-var(light__third);
+    cursor: pointer;
+    border: 1px solid get-var(light__third);
+    @include multi-transition((color, border, fill));
 
-//     &:hover {
-//         color: get-var(dark__first);
-//         border: 2px solid black;
-//         background: get-var(light__first);
-
-//         @media screen and (min-width: 575px) {
-//             transform: scale(1.12);
-//         }
-//     }
-// }
+    &:hover {
+        color: get-var(main__second);
+        border: 1px solid get-var(main__second);
+        fill: get-var(main__second);
+    }
+}
