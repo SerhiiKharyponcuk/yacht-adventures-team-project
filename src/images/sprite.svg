@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+
+  <!-- MENU -->
+  <symbol id="icon-menu" viewBox="0 0 24 24">
+    <path d="M3 6h18M3 12h18M3 18h18"
+          fill="none"
+          stroke="inherit"
+          stroke-width="2"
+          stroke-linecap="round"/>
+  </symbol>
+
+
+  <!-- CLOSE -->
+  <symbol id="icon-close" viewBox="0 0 24 24">
+    <path d="M6 6l12 12M18 6l-12 12"
+          fill="none"
+          stroke="inherit"
+          stroke-width="2"
+          stroke-linecap="round"/>
+  </symbol>
+
+
+  <!-- INSTAGRAM -->
+  <symbol id="icon-instagram" viewBox="0 0 24 24">
+    <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5z"
+          fill="none"
+          stroke="inherit"
+          stroke-width="2"/>
+    <path d="M12 8a4 4 0 1 0 4 4"
+          fill="none"
+          stroke="inherit"
+          stroke-width="2"/>
+    <circle cx="17.5" cy="6.5" r="1"
+            fill="inherit"/>
+  </symbol>
+
+
+  <!-- FACEBOOK -->
+  <symbol id="icon-facebook" viewBox="0 0 24 24">
+    <path d="M14 9h4V5h-4c-2.2 0-4 1.8-4 4v3H7v4h3v6h4v-6h3l1-4h-4V9c0-.6.4-1 1-1z"
+          fill="inherit"/>
+  </symbol>
+
+
+  <!-- LOGO -->
+  <symbol id="icon-logo" viewBox="0 0 150 40">
+    <path d="M10 30h6l3-8 3 8h6l-7-18h-4L10 30z"
+          fill="inherit"/>
+    <path d="M40 12h5v18h-5z"
+          fill="inherit"/>
+    <path d="M55 12h6l6 10V12h5v18h-6l-6-10v10h-5z"
+          fill="inherit"/>
+  </symbol>
+
+<!-- ARROW RIGHT -->
+<symbol id="icon-arrow-right" viewBox="0 0 24 24">
+  <path d="M5 12h13"
+        fill="none"
+        stroke="inherit"
+        stroke-width="2"
+        stroke-linecap="round" />
+  <path d="M13 6l5 6-5 6"
+        fill="none"
+        stroke="inherit"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+</symbol>
+
+
+<!-- ARROW UP -->
+<symbol id="icon-arrow-up" viewBox="0 0 24 24">
+  <path d="M12 19V6"
+        fill="none"
+        stroke="inherit"
+        stroke-width="2"
+        stroke-linecap="round" />
+  <path d="M6 12l6-6 6 6"
+        fill="none"
+        stroke="inherit"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+</symbol>
+
+</svg>
