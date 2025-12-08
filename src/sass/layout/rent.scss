@@ -63,12 +63,12 @@
         }
 
         &__input {
-            background-color: get-var(main__first);
+            background-color: get-var(dark__first);
             color: get-var(light__third);
         }
 
         &__textarea {
-            background-color: get-var(main__first);
+            background-color: get-var(dark__first);
             resize: none;
             border: none;
             color: get-var(light__third);
@@ -121,7 +121,7 @@
     .modal {
         position: relative;
         width: 335px;
-        background: get-var(main__first);
+        background: get-var(dark__first);
         padding: 40px 24px;
         border-radius: 20px;
         opacity: 0;

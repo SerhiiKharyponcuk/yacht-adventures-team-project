@@ -1,6 +1,10 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: $family;
-    background-color: get-var(main__first);
+    background-color: get-var(dark__first);
     line-height: 140%;
     letter-spacing: -0.02em;
     color: get-var(light__third);
