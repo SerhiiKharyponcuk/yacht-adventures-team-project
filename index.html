@@ -17,8 +17,8 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap" rel="stylesheet">
 
   
-  <script type="module" crossorigin src="/yacht-adventures-team-project/assets/index-a196e572.js"></script>
-  <link rel="stylesheet" href="/yacht-adventures-team-project/assets/index-69aa42d5.css">
+  <script type="module" crossorigin src="/yacht-adventures-team-project/assets/index-ae2f4e23.js"></script>
+  <link rel="stylesheet" href="/yacht-adventures-team-project/assets/index-baf14e86.css">
 </head>
 
 <body>
@@ -39,66 +39,85 @@
   
   <!-- Loads the specified .html file -->
   <header>
-  <div class="header__inner container" id="heder">
-    <!-- Logo -->
-    <a href="./index.html" class="logo">
-        <img src="#" alt="Yacht Adventures logo" class="logo__icon" />
-    </a>
+  <header class="header">
+    <div class="header__inner container" id="header">
 
-    <!-- Desktop / tablet navigation -->
-    <nav class="nav" aria-label="Primary navigation">
-        <ul class="nav__list">
-            <li class="nav__item">
-                <a href="#about" class="nav__link">ABOUT</a>
-            </li>
-            <li class="nav__item">
-                <a href="#yachts" class="nav__link">YACHTS</a>
-            </li>
-            <li class="nav__item">
-                <a href="#reviews" class="nav__link">REVIEWS</a>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- Burger button for tablet / mobile -->
-    <button class="burger" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-        <img src="#" alt="burger">
-    </button>
-</div>
-
-<!-- Thin divider line under header -->
-<span class="header__divider" aria-hidden="true"></span>
-
-<!-- Mobile menu overlay -->
-<div class="mobile-menu" id="mobile-menu" hidden>
-    <div class="mobile-menu__top">
-        <a href="./index.html" class="logo mobile-menu__logo">
-            <img src="./images/logo-yacht.svg" alt="Yacht Adventures logo" class="logo__icon" />
-            <span class="logo__text">YACHT ADVENTURES</span>
+        <!-- Logo -->
+        <a href="./index.html" class="logo">
+            <svg class="logo__svg"  width="20px" height="20px">
+                <use href="/yacht-adventures-team-project/assets/sprite-7c72725f.svg#icon-logo"></use>
+            </svg>
+            <svg class="logo__svg2" width="146px" heght="10px">
+                <use href="/yacht-adventures-team-project/assets/sprite-7c72725f.svg#icon-logo2"></use>
+            </svg>
         </a>
 
-        <button class="mobile-menu__close" type="button" aria-label="Close navigation menu">
-            <span class="mobile-menu__close-line"></span>
-            <span class="mobile-menu__close-line"></span>
+        <!-- Desktop / tablet navigation -->
+        <nav class="nav" aria-label="Primary navigation">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">ABOUT</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#yachts" class="nav__link">YACHTS</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#reviews" class="nav__link">REVIEWS</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Burger -->
+        <button
+            class="burger"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
+            
+            <svg class="burger__menu">
+                <use href="/yacht-adventures-team-project/assets/sprite-7c72725f.svg#burger-menu"></use>
+            </svg>
         </button>
+
     </div>
 
-    <span class="mobile-menu__divider" aria-hidden="true"></span>
+    <!-- Divider -->
+    <span class="header__divider"></span>
+</header>
 
-    <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu" hidden>
+
+    <div class="mobile-menu__top">
+
+       <div class="logo">
+            <svg class="logo__svg" width="18px" heght="18px">
+                <use href="/yacht-adventures-team-project/assets/sprite-7c72725f.svg#icon-logo"></use>
+            </svg>
+            <svg class="logo__svg2" width="146px" heght="10px">
+                <use href="/yacht-adventures-team-project/assets/sprite-7c72725f.svg#icon-logo2"></use>
+            </svg>
+        </div>
+
+        <button class="mobile-menu__close" type="button" aria-label="Close navigation">
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+    <span class="mobile-menu__divider"></span>
+
+    <nav class="mobile-menu__nav">
         <ul class="mobile-menu__list">
-            <li class="mobile-menu__item">
-                <a href="#about" class="mobile-menu__link">ABOUT</a>
-            </li>
-            <li class="mobile-menu__item">
-                <a href="#yachts" class="mobile-menu__link">YACHTS</a>
-            </li>
-            <li class="mobile-menu__item">
-                <a href="#reviews" class="mobile-menu__link">REVIEWS</a>
-            </li>
+            <li><a href="#about" class="mobile-menu__link">ABOUT</a></li>
+            <li><a href="#yachts" class="mobile-menu__link">YACHTS</a></li>
+            <li><a href="#reviews" class="mobile-menu__link">REVIEWS</a></li>
         </ul>
     </nav>
 </div>
+
   </header>
   <main>
   <section class="hero">
@@ -116,18 +135,18 @@
 
                     <ul class="hero-card__avatars">
                         <li class="hero-card__avatar">
-                            <img src="./images/clients/client-1@1x.jpg" srcset="./images/clients/client-1@1x.jpg 1x,
-                        ./images/clients/client-1@2x.jpg 2x" alt="Client 1">
+                            <img src="/yacht-adventures-team-project/assets/hero-client-03@2x (4)-47c74ff6.png" srcset="./images/hero-client-03@2x (4).png 1x,
+                        ./images/hero-client-03@2x (1).png 2x" alt="Client 1">
                         </li>
 
                         <li class="hero-card__avatar">
-                            <img src="./images/clients/client-2@1x.jpg" srcset="./images/clients/client-2@1x.jpg 1x,
-                        ./images/clients/client-2@2x.jpg 2x" alt="Client 2">
+                            <img src="/yacht-adventures-team-project/assets/hero-client-03@2x (5)-8797a112.png" srcset="./images/hero-client-03@2x (5).png 1x,
+                        ./images/hero-client-03@2x (2).png 2x" alt="Client 2">
                         </li>
 
                         <li class="hero-card__avatar">
-                            <img src="./images/clients/client-3@1x.jpg" srcset="./images/clients/client-3@1x.jpg 1x,
-                        ./images/clients/client-3@2x.jpg 2x" alt="Client 3">
+                            <img src="/yacht-adventures-team-project/assets/hero-client-03@2x (6)-862760d4.png" srcset="./images/hero-client-03@2x (6).png 1x,
+                        ./images/hero-client-03@2x (3).png 2x" alt="Client 3">
                         </li>
                     </ul>
                 </div>
@@ -135,26 +154,13 @@
 
                 <!-- Yacht image -->
                 <picture class="hero-card__image">
-
-                    <!-- Desktop -->
-                    <source media="(min-width:1200px)" srcset="
-              ./images/hero/yacht-desktop@1x.png 1x,
-              ./images/hero/yacht-desktop@2x.png 2x
-            ">
-
                     <!-- Tablet -->
-                    <source media="(min-width:768px)" srcset="
-              ./images/hero/yacht-tablet@1x.png 1x,
-              ./images/hero/yacht-tablet@2x.png 2x
-            ">
+                    <source media="(min-width:768px)" srcset="/yacht-adventures-team-project/assets/hero-boat-tablet-2f183949.webp 1x, /yacht-adventures-team-project/assets/hero-boat-tablet@2x-4d9aebfd.webp 2x">
 
                     <!-- Mobile -->
-                    <source media="(max-width:767px)" srcset="
-              ./images/hero/yacht-mobile@1x.png 1x,
-              ./images/hero/yacht-mobile@2x.png 2x
-            ">
+                    <source media="(max-width:767px)" srcset="/yacht-adventures-team-project/assets/hero-boat-mobile-1955c404.webp 1x, /yacht-adventures-team-project/assets/hero-boat-mobile@2x-8544940e.webp 2x">
 
-                    <img src="./images/hero/yacht-mobile@1x.png" alt="Luxury yacht" loading="lazy">
+                    <img src="/yacht-adventures-team-project/assets/hero-boat-mobile-1955c404.webp" alt="Luxury yacht" loading="lazy">
 
                 </picture>
 
@@ -173,26 +179,13 @@
 
             <!-- Floating client photo -->
             <picture class="hero-photo">
-
-                <!-- Desktop -->
-                <source media="(min-width:1200px)" srcset="
-            ./images/hero/client-desktop@1x.jpg 1x,
-            ./images/hero/client-desktop@2x.jpg 2x
-          ">
-
-                <!-- Tablet -->
-                <source media="(min-width:768px)" srcset="
-            ./images/hero/client-tablet@1x.jpg 1x,
-            ./images/hero/client-tablet@2x.jpg 2x
-          ">
+                <!-- Tablet Desktop -->
+                <source media="(min-width:768px)" srcset="/yacht-adventures-team-project/assets/hero-person-tablet-desktop-25dca59c.webp 1x, /yacht-adventures-team-project/assets/hero-person-tablet-desktop@2x-d0f65246.webp 2x">
 
                 <!-- Mobile -->
-                <source media="(max-width:767px)" srcset="
-            ./images/hero/client-mobile@1x.jpg 1x,
-            ./images/hero/client-mobile@2x.jpg 2x
-          ">
+                <source media="(max-width:767px)" srcset="/yacht-adventures-team-project/assets/hero-person-mobile-e7cdbbd0.webp 1x, /yacht-adventures-team-project/assets/hero-person-mobile@2x-4f5f5164.webp 2x">
 
-                <img src="./images/hero/client-mobile@1x.jpg" alt="Satisfied client" loading="lazy">
+                <img src="/yacht-adventures-team-project/assets/hero-person-mobile-e7cdbbd0.webp" alt="Satisfied client" loading="lazy">
 
             </picture>
 
@@ -230,7 +223,7 @@
 
     </div>
 </section>
-  <section class="choose">
+  <section class="choose" id="about">
     <div class="choose__inner container">
 
         <!-- TEXT BLOCK -->
@@ -280,47 +273,26 @@
             <picture class="choose__image choose__image--large">
 
                 <!-- Desktop -->
-                <source media="(min-width:1200px)" srcset="
-            ./images/choose/main-desktop@1x.jpg 1x,
-            ./images/choose/main-desktop@2x.jpg 2x
-          ">
+                <source media="(min-width:1200px)" srcset="/yacht-adventures-team-project/assets/choose-main-desktop-4fe9f6e2.webp 1x, /yacht-adventures-team-project/assets/choose-main-desktop-4fe9f6e2.webp 2x">
 
                 <!-- Tablet -->
-                <source media="(min-width:768px)" srcset="
-            ./images/choose/main-tablet@1x.jpg 1x,
-            ./images/choose/main-tablet@2x.jpg 2x
-          ">
+                <source media="(min-width:768px)" srcset="/yacht-adventures-team-project/assets/choose-main-desktop-4fe9f6e2.webp 1x, /yacht-adventures-team-project/assets/choose-main-desktop-4fe9f6e2.webp 2x">
 
                 <!-- Mobile -->
-                <source media="(max-width:767px)" srcset="
-            ./images/choose/main-mobile@1x.jpg 1x,
-            ./images/choose/main-mobile@2x.jpg 2x
-          ">
+                <source media="(max-width:767px)" srcset="/yacht-adventures-team-project/assets/choose-main-mobile-8f59b727.webp 1x, /yacht-adventures-team-project/assets/choose-main-mobile-8f59b727.webp 2x">
 
-                <img src="./images/choose/main-mobile@1x.jpg" alt="Luxury yacht deck" loading="lazy">
+                <img src="/yacht-adventures-team-project/assets/choose-main-mobile-8f59b727.webp" alt="Luxury yacht deck" loading="lazy">
             </picture>
 
 
             <!-- SMALL IMAGE 1 -->
             <picture class="choose__image choose__image--small">
 
-                <!-- Desktop -->
-                <source media="(min-width:1200px)" srcset="
-            ./images/choose/small-1-desktop@1x.jpg 1x,
-            ./images/choose/small-1-desktop@2x.jpg 2x
-          ">
-
                 <!-- Tablet -->
-                <source media="(min-width:768px)" srcset="
-            ./images/choose/small-1-tablet@1x.jpg 1x,
-            ./images/choose/small-1-tablet@2x.jpg 2x
-          ">
+                <source media="(min-width:768px)" srcset="/yacht-adventures-team-project/assets/choose-thumb-01-tablet-desktop-a4d26032.webp 1x, /yacht-adventures-team-project/assets/choose-thumb-01-tablet-desktop-a4d26032.webp 2x">
 
                 <!-- Mobile -->
-                <source media="(max-width:767px)" srcset="
-            ./images/choose/small-1-mobile@1x.jpg 1x,
-            ./images/choose/small-1-mobile@2x.jpg 2x
-          ">
+                <source media="(max-width:767px)" srcset="/yacht-adventures-team-project/assets/choose-thumb-01-3f98165c.webp 1x, /yacht-adventures-team-project/assets/choose-thumb-01-3f98165c.webp 2x">
 
                 <img src="./images/choose/small-1-mobile@1x.jpg" alt="Luxury yacht interior" loading="lazy">
 
@@ -330,25 +302,10 @@
             <!-- SMALL IMAGE 2 -->
             <picture class="choose__image choose__image--small">
 
-                <!-- Desktop -->
-                <source media="(min-width:1200px)" srcset="
-            ./images/choose/small-2-desktop@1x.jpg 1x,
-            ./images/choose/small-2-desktop@2x.jpg 2x
-          ">
+                <!-- Mobile tablet desktop -->
+                <source media="(max-width:767px)" srcset="/yacht-adventures-team-project/assets/choose-thumb-02-6e331d8a.webp 1x, /yacht-adventures-team-project/assets/choose-thumb-02-6e331d8a.webp 2x">
 
-                <!-- Tablet -->
-                <source media="(min-width:768px)" srcset="
-            ./images/choose/small-2-tablet@1x.jpg 1x,
-            ./images/choose/small-2-tablet@2x.jpg 2x
-          ">
-
-                <!-- Mobile -->
-                <source media="(max-width:767px)" srcset="
-            ./images/choose/small-2-mobile@1x.jpg 1x,
-            ./images/choose/small-2-mobile@2x.jpg 2x
-          ">
-
-                <img src="./images/choose/small-2-mobile@1x.jpg" alt="Luxury yacht sailing" loading="lazy">
+                <img src="/yacht-adventures-team-project/assets/choose-thumb-02-6e331d8a.webp" alt="Luxury yacht sailing" loading="lazy">
 
             </picture>
 
@@ -370,7 +327,7 @@
 
     </div>
 </section>
-  <section class="yachts">
+  <section class="yachts" id="yachts">
     <div class="yachts__inner container">
 
         <div class="yachts__header">
@@ -392,12 +349,12 @@
 
                         <picture class="yacht-card__image">
                             <source media="(min-width:1200px)"
-                                srcset="./images/yachts/arrow-desktop@1x.jpg 1x, ./images/yachts/arrow-desktop@2x.jpg 2x">
+                                srcset="./images/yacht-01-desktop.webp 1x, ./images/yachts/arrow-desktop@2x.jpg 2x">
                             <source media="(min-width:768px)"
-                                srcset="./images/yachts/arrow-tablet@1x.jpg 1x, ./images/yachts/arrow-tablet@2x.jpg 2x">
+                                srcset="./images/yacht-01-desktop.webp 1x, ./images/yachts/arrow-tablet@2x.jpg 2x">
                             <source media="(max-width:767px)"
-                                srcset="./images/yachts/arrow-mobile@1x.jpg 1x, ./images/yachts/arrow-mobile@2x.jpg 2x">
-                            <img src="./images/yachts/arrow-mobile@1x.jpg" alt="Arrow yacht">
+                                srcset="./images/yacht-01-desktop.webp 1x, ./images/yachts/arrow-mobile@2x.jpg 2x">
+                            <img src="/yacht-adventures-team-project/assets/yacht-01-desktop-95f90422.webp" alt="Arrow yacht">
                         </picture>
 
                         <div class="yacht-card__body">
@@ -425,7 +382,7 @@
                                 </div>
                             </dl>
 
-                            <div class="yacht-card__price">€350,000</div>
+                            <div class="yacht-card__price">€33,500,000</div>
                         </div>
 
                     </article>
@@ -436,12 +393,12 @@
                     <article class="yacht-card">
                         <picture class="yacht-card__image">
                             <source media="(min-width:1200px)"
-                                srcset="./images/yachts/benedetta-desktop@1x.jpg 1x, ./images/yachts/benedetta-desktop@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-02-desktop-4d67f244.webp 1x, /yacht-adventures-team-project/assets/yacht-02-desktop-4d67f244.webp 2x">
                             <source media="(min-width:768px)"
-                                srcset="./images/yachts/benedetta-tablet@1x.jpg 1x, ./images/yachts/benedetta-tablet@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-02-desktop-4d67f244.webp 1x, /yacht-adventures-team-project/assets/yacht-02-desktop-4d67f244.webp ">
                             <source media="(max-width:767px)"
-                                srcset="./images/yachts/benedetta-mobile@1x.jpg 1x, ./images/yachts/benedetta-mobile@2x.jpg 2x">
-                            <img src="./images/yachts/benedetta-mobile@1x.jpg" alt="Benedetta yacht">
+                                srcset="/yacht-adventures-team-project/assets/yacht-02-desktop-4d67f244.webp 1x, /yacht-adventures-team-project/assets/yacht-02-desktop-4d67f244.webp ">
+                            <img src="/yacht-adventures-team-project/assets/yacht-02-desktop-4d67f244.webp" alt="Benedetta yacht">
                         </picture>
 
                         <div class="yacht-card__body">
@@ -465,7 +422,7 @@
                                 </div>
                             </dl>
 
-                            <div class="yacht-card__price">€320,000</div>
+                            <div class="yacht-card__price">€23,210,000</div>
                         </div>
                     </article>
                 </li>
@@ -475,12 +432,12 @@
                     <article class="yacht-card">
                         <picture class="yacht-card__image">
                             <source media="(min-width:1200px)"
-                                srcset="./images/yachts/belle-desktop@1x.jpg 1x, ./images/yachts/belle-desktop@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-03-desktop-4ee1d24c.webp 1x, /yacht-adventures-team-project/assets/yacht-03-desktop-4ee1d24c.webp 2x">
                             <source media="(min-width:768px)"
-                                srcset="./images/yachts/belle-tablet@1x.jpg 1x, ./images/yachts/belle-tablet@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-03-desktop-4ee1d24c.webp , /yacht-adventures-team-project/assets/yacht-03-desktop-4ee1d24c.webp 2x">
                             <source media="(max-width:767px)"
-                                srcset="./images/yachts/belle-mobile@1x.jpg 1x, ./images/yachts/belle-mobile@2x.jpg 2x">
-                            <img src="./images/yachts/belle-mobile@1x.jpg" alt="Belle Anna yacht">
+                                srcset="/yacht-adventures-team-project/assets/yacht-03-desktop-4ee1d24c.webp , /yacht-adventures-team-project/assets/yacht-03-desktop-4ee1d24c.webp 2x">
+                            <img src="/yacht-adventures-team-project/assets/yacht-03-desktop-4ee1d24c.webp" alt="Belle Anna yacht">
                         </picture>
 
                         <div class="yacht-card__body">
@@ -500,7 +457,7 @@
                                 </div>
                             </dl>
 
-                            <div class="yacht-card__price">€420,000</div>
+                            <div class="yacht-card__price">€21,000,000</div>
                         </div>
                     </article>
                 </li>
@@ -510,12 +467,12 @@
                     <article class="yacht-card">
                         <picture class="yacht-card__image">
                             <source media="(min-width:1200px)"
-                                srcset="./images/yachts/ellen-desktop@1x.jpg 1x, ./images/yachts/ellen-desktop@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-04-desktop-a3218a53.webp , /yacht-adventures-team-project/assets/yacht-04-desktop-a3218a53.webp ">
                             <source media="(min-width:768px)"
-                                srcset="./images/yachts/ellen-tablet@1x.jpg 1x, ./images/yachts/ellen-tablet@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-04-desktop-a3218a53.webp 1x, /yacht-adventures-team-project/assets/yacht-04-desktop-a3218a53.webp 2x">
                             <source media="(max-width:767px)"
-                                srcset="./images/yachts/ellen-mobile@1x.jpg 1x, ./images/yachts/ellen-mobile@2x.jpg 2x">
-                            <img src="./images/yachts/ellen-mobile@1x.jpg" alt="Ellen yacht">
+                                srcset="/yacht-adventures-team-project/assets/yacht-04-desktop-a3218a53.webp , /yacht-adventures-team-project/assets/yacht-04-desktop-a3218a53.webp 2x">
+                            <img src="/yacht-adventures-team-project/assets/yacht-04-desktop-a3218a53.webp" alt="Ellen yacht">
                         </picture>
 
                         <div class="yacht-card__body">
@@ -539,7 +496,7 @@
                                 </div>
                             </dl>
 
-                            <div class="yacht-card__price">€150,000</div>
+                            <div class="yacht-card__price">€9,300,000</div>
                         </div>
                     </article>
                 </li>
@@ -549,12 +506,12 @@
                     <article class="yacht-card">
                         <picture class="yacht-card__image">
                             <source media="(min-width:1200px)"
-                                srcset="./images/yachts/mirage-desktop@1x.jpg 1x, ./images/yachts/mirage-desktop@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-05-desktop-02894b40.webp , /yacht-adventures-team-project/assets/yacht-05-desktop-02894b40.webp 2x">
                             <source media="(min-width:768px)"
-                                srcset="./images/yachts/mirage-tablet@1x.jpg 1x, ./images/yachts/mirage-tablet@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-05-desktop-02894b40.webp , /yacht-adventures-team-project/assets/yacht-05-desktop-02894b40.webp 2x">
                             <source media="(max-width:767px)"
-                                srcset="./images/yachts/mirage-mobile@1x.jpg 1x, ./images/yachts/mirage-mobile@2x.jpg 2x">
-                            <img src="./images/yachts/mirage-mobile@1x.jpg" alt="Mirage yacht">
+                                srcset="/yacht-adventures-team-project/assets/yacht-05-desktop-02894b40.webp , /yacht-adventures-team-project/assets/yacht-05-desktop-02894b40.webp 2x">
+                            <img src="/yacht-adventures-team-project/assets/yacht-05-desktop-02894b40.webp" alt="Mirage yacht">
                         </picture>
 
                         <div class="yacht-card__body">
@@ -578,7 +535,7 @@
                                 </div>
                             </dl>
 
-                            <div class="yacht-card__price">€275,000</div>
+                            <div class="yacht-card__price">€13,500,000</div>
                         </div>
                     </article>
                 </li>
@@ -588,12 +545,12 @@
                     <article class="yacht-card">
                         <picture class="yacht-card__image">
                             <source media="(min-width:1200px)"
-                                srcset="./images/yachts/king-desktop@1x.jpg 1x, ./images/yachts/king-desktop@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-06-desktop-17f5b02f.webp , /yacht-adventures-team-project/assets/yacht-06-desktop-17f5b02f.webp 2x">
                             <source media="(min-width:768px)"
-                                srcset="./images/yachts/king-tablet@1x.jpg 1x, ./images/yachts/king-tablet@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-06-desktop-17f5b02f.webp 1x, /yacht-adventures-team-project/assets/yacht-06-desktop-17f5b02f.webp 2x">
                             <source media="(max-width:767px)"
-                                srcset="./images/yachts/king-mobile@1x.jpg 1x, ./images/yachts/king-mobile@2x.jpg 2x">
-                            <img src="./images/yachts/king-mobile@1x.jpg" alt="King yacht">
+                                srcset="/yacht-adventures-team-project/assets/yacht-06-desktop-17f5b02f.webp , /yacht-adventures-team-project/assets/yacht-06-desktop-17f5b02f.webp 2x">
+                            <img src="/yacht-adventures-team-project/assets/yacht-06-desktop-17f5b02f.webp" alt="King yacht">
                         </picture>
 
                         <div class="yacht-card__body">
@@ -617,7 +574,7 @@
                                 </div>
                             </dl>
 
-                            <div class="yacht-card__price">€250,000</div>
+                            <div class="yacht-card__price">€1,850,000</div>
                         </div>
                     </article>
                 </li>
@@ -627,12 +584,12 @@
                     <article class="yacht-card">
                         <picture class="yacht-card__image">
                             <source media="(min-width:1200px)"
-                                srcset="./images/yachts/salt-desktop@1x.jpg 1x, ./images/yachts/salt-desktop@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-07-desktop-e5061533.webp 1x, /yacht-adventures-team-project/assets/yacht-07-desktop-e5061533.webp 2x">
                             <source media="(min-width:768px)"
-                                srcset="./images/yachts/salt-tablet@1x.jpg 1x, ./images/yachts/salt-tablet@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-07-desktop-e5061533.webp 1x, /yacht-adventures-team-project/assets/yacht-07-desktop-e5061533.webp 2x">
                             <source media="(max-width:767px)"
-                                srcset="./images/yachts/salt-mobile@1x.jpg 1x, ./images/yachts/salt-mobile@2x.jpg 2x">
-                            <img src="./images/yachts/salt-mobile@1x.jpg" alt="Salt yacht">
+                                srcset="/yacht-adventures-team-project/assets/yacht-07-desktop-e5061533.webp 1x, /yacht-adventures-team-project/assets/yacht-07-desktop-e5061533.webp 2x">
+                            <img src="/yacht-adventures-team-project/assets/yacht-07-desktop-e5061533.webp" alt="Salt yacht">
                         </picture>
 
                         <div class="yacht-card__body">
@@ -656,7 +613,7 @@
                                 </div>
                             </dl>
 
-                            <div class="yacht-card__price">€225,000</div>
+                            <div class="yacht-card__price">€7,800,000</div>
                         </div>
                     </article>
                 </li>
@@ -666,12 +623,12 @@
                     <article class="yacht-card">
                         <picture class="yacht-card__image">
                             <source media="(min-width:1200px)"
-                                srcset="./images/yachts/storm-desktop@1x.jpg 1x, ./images/yachts/storm-desktop@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-08-desktop-d45fad20.webp 1x, /yacht-adventures-team-project/assets/yacht-08-desktop-d45fad20.webp 2x">
                             <source media="(min-width:768px)"
-                                srcset="./images/yachts/storm-tablet@1x.jpg 1x, ./images/yachts/storm-tablet@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-08-desktop-d45fad20.webp 1x, /yacht-adventures-team-project/assets/yacht-08-desktop-d45fad20.webp 2x">
                             <source media="(max-width:767px)"
-                                srcset="./images/yachts/storm-mobile@1x.jpg 1x, ./images/yachts/storm-mobile@2x.jpg 2x">
-                            <img src="./images/yachts/storm-mobile@1x.jpg" alt="Storm yacht">
+                                srcset="/yacht-adventures-team-project/assets/yacht-08-desktop-d45fad20.webp 1x, /yacht-adventures-team-project/assets/yacht-08-desktop-d45fad20.webp 2x">
+                            <img src="/yacht-adventures-team-project/assets/yacht-08-desktop-d45fad20.webp" alt="Storm yacht">
                         </picture>
 
                         <div class="yacht-card__body">
@@ -695,7 +652,7 @@
                                 </div>
                             </dl>
 
-                            <div class="yacht-card__price">€210,000</div>
+                            <div class="yacht-card__price">€2,900,000</div>
                         </div>
                     </article>
                 </li>
@@ -705,12 +662,12 @@
                     <article class="yacht-card">
                         <picture class="yacht-card__image">
                             <source media="(min-width:1200px)"
-                                srcset="./images/yachts/collu-desktop@1x.jpg 1x, ./images/yachts/collu-desktop@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-09-desktop-2309503c.webp 1x, /yacht-adventures-team-project/assets/yacht-09-desktop-2309503c.webp 2x">
                             <source media="(min-width:768px)"
-                                srcset="./images/yachts/collu-tablet@1x.jpg 1x, ./images/yachts/collu-tablet@2x.jpg 2x">
+                                srcset="/yacht-adventures-team-project/assets/yacht-09-desktop-2309503c.webp 1x, /yacht-adventures-team-project/assets/yacht-09-desktop-2309503c.webp 2x">
                             <source media="(max-width:767px)"
-                                srcset="./images/yachts/collu-mobile@1x.jpg 1x, ./images/yachts/collu-mobile@2x.jpg 2x">
-                            <img src="./images/yachts/collu-mobile@1x.jpg" alt="Collu yacht">
+                                srcset="/yacht-adventures-team-project/assets/yacht-09-desktop-2309503c.webp , /yacht-adventures-team-project/assets/yacht-09-desktop-2309503c.webp 2x">
+                            <img src="/yacht-adventures-team-project/assets/yacht-09-desktop-2309503c.webp" alt="Collu yacht">
                         </picture>
 
                         <div class="yacht-card__body">
@@ -730,11 +687,11 @@
                                 </div>
                                 <div>
                                     <dt>Guests</dt>
-                                    <dd>8 cabins</dd>
+                                    <dd>10 in 5 cabins</dd>
                                 </div>
                             </dl>
 
-                            <div class="yacht-card__price">€195,000</div>
+                            <div class="yacht-card__price">$4,300,000</div>
                         </div>
                     </article>
                 </li>
@@ -817,7 +774,7 @@
             <button type="submit" class="rent-form__button">
                 Send
                 <svg class="rent-form__button-svg" width="18px" height="9px">
-                    <use href="/yacht-adventures-team-project/assets/sprite-be57c653.svg#icon-arrow-right"></use>
+                    <use href="/yacht-adventures-team-project/assets/sprite-7c72725f.svg#icon-arrow-right"></use>
                 </svg>
             </button>
         </form>
@@ -827,7 +784,7 @@
                 <div class="modal-circle"></div>
                 <button class="modal__close" id="closeModal">
                     <svg width="24px" height="24px">
-                        <use href="/yacht-adventures-team-project/assets/sprite-be57c653.svg#icon-close"></use>
+                        <use href="/yacht-adventures-team-project/assets/sprite-7c72725f.svg#icon-close"></use>
                     </svg>
                 </button>
                 <picture class="modal__picture">
@@ -849,7 +806,7 @@
         </div>
     </div>
 </section>
-  <section class="reviews">
+  <section class="reviews" id="reviews">
     <div class="container">
         <div class="reviews__text-content">
             <h2 class="reviews__title">
@@ -917,9 +874,9 @@
                 <li class="slider-pagination-list__item" data-slide-to="2"></li>
             </ul>
         </div>
-        <a class="top-button" href="#heder">
+        <a class="top-button" href="#header">
             <svg class="top-button__svg">
-                <use href="/yacht-adventures-team-project/assets/sprite-be57c653.svg#icon-arrow-up"></use>
+                <use href="/yacht-adventures-team-project/assets/sprite-7c72725f.svg#icon-arrow-up"></use>
             </svg>
         </a>
     </div>
@@ -932,10 +889,10 @@
         <div class="footer__line"></div>
         <div class="logo">
             <svg class="logo__svg">
-                <use href="/yacht-adventures-team-project/assets/sprite-be57c653.svg#icon-logo"></use>
+                <use href="/yacht-adventures-team-project/assets/sprite-7c72725f.svg#icon-logo"></use>
             </svg>
             <svg class="logo__svg2">
-                <use href="/yacht-adventures-team-project/assets/sprite-be57c653.svg#icon-logo2"></use>
+                <use href="/yacht-adventures-team-project/assets/sprite-7c72725f.svg#icon-logo2"></use>
             </svg>
         </div>
         <ul class="footer-list">
@@ -948,17 +905,17 @@
             <ul class="footer-social-list">
                 <li class="footer-social-list__item"><a class="footer-social-list__link" href="#">
                         <svg class="footer-social-list__svg facebook">
-                            <use href="/yacht-adventures-team-project/assets/sprite-be57c653.svg#icon-facebook"></use>
+                            <use href="/yacht-adventures-team-project/assets/sprite-7c72725f.svg#icon-facebook"></use>
                         </svg>
                     </a></li>
                 <li class="footer-social-list__item"><a class="footer-social-list__link" href="#">
                         <svg class="footer-social-list__svg instagram">
-                            <use href="/yacht-adventures-team-project/assets/sprite-be57c653.svg#icon-instagram"></use>
+                            <use href="/yacht-adventures-team-project/assets/sprite-7c72725f.svg#icon-instagram"></use>
                         </svg>
                     </a></li>
                 <li class="footer-social-list__item"><a class="footer-social-list__link" href="#">
                         <svg class="footer-social-list__svg youtube">
-                            <use href="/yacht-adventures-team-project/assets/sprite-be57c653.svg#icon-youtube"></use>
+                            <use href="/yacht-adventures-team-project/assets/sprite-7c72725f.svg#icon-youtube"></use>
                         </svg>
                     </a></li>
             </ul>
