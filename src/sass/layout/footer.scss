@@ -1,10 +1,36 @@
 .footer {
+    position: relative;
     padding-top: 40px;
     margin-bottom: 14px;
 
     @media screen and (min-width: getBreakPoint(tablet)) {
         padding-top: 64px;
         margin-bottom: 16px;
+    }
+
+    &__circle {
+        position: absolute;
+        z-index: 2;
+        top: 80px;
+        right: 0;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            top: 0;
+        }
+
+        &__svg {
+            width: 580px;
+            height: 243px;
+            // transform: rotate(90deg);
+
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                width: 780px;
+            }
+
+            @media screen and (min-width: getBreakPoint(desktop)) {
+                width: 1030px;
+            }
+        }
     }
 
     &__line {
@@ -40,6 +66,8 @@
     }
 
     .logo {
+        position: relative;
+        z-index: 10;
         display: flex;
         align-items: center;
 
@@ -74,6 +102,8 @@
     }
 
     .footer-list {
+        position: relative;
+        z-index: 10;
         display: flex;
         flex-direction: column;
         gap: 14px;
@@ -99,6 +129,8 @@
     }
 
     .footer-social-content {
+        position: relative;
+        z-index: 10;
         &__title {
             font-weight: 700;
             font-size: 14px;
@@ -152,6 +184,8 @@
     }
 
     .footer-copyright-list {
+        position: relative;
+        z-index: 10;
         display: flex;
         gap: 14px;
         justify-content: center;

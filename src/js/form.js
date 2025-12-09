@@ -12,7 +12,9 @@ form.addEventListener('submit', function(event) {
     form.reset();
 });
 
-closeModalButton.addEventListener('click', function() {
+closeModalButton.addEventListener('click', function(event) {
+    event.stopPropagation(); 
+    
     modal.classList.remove('active');
     setTimeout(() => {
         modal.style.display = 'none';

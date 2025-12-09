@@ -1,4 +1,30 @@
+.rent-relative {
+    position: relative;
+}
+
+.rent__circle {
+    position: absolute;
+    z-index: 2;
+    top: 284px;
+    right: 0;
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+        top: 20px;
+    }
+
+    @media screen and (min-width: getBreakPoint(desktop)) {
+        top: 30px;
+    }
+
+    &__svg {
+        width: 374px;
+        height: 570px;
+    }
+}
+
 .rent {
+    position: relative;
+    z-index: 5;
     padding-bottom: 80px;
 
     @media screen and (min-width: getBreakPoint(tablet)) {
@@ -63,12 +89,12 @@
         }
 
         &__input {
-            background-color: get-var(dark__first);
+            background-color: transparent;
             color: get-var(light__third);
         }
 
         &__textarea {
-            background-color: get-var(dark__first);
+            background-color: transparent;
             resize: none;
             border: none;
             color: get-var(light__third);
@@ -106,6 +132,27 @@
         justify-content: center;
         align-items: center;
         @include multi-transition(background-color);
+    }
+
+    .modal-circle {
+        position: absolute;
+        z-index: 2;
+        top: -162px;
+        right: -8%;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            top: -78px;
+            right: 0%;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            top: -76px;
+        }
+
+        &__svg {
+            width: 570px;
+            height: 570px;
+        }
     }
 
     .modal-overlay.active {
@@ -156,6 +203,7 @@
 
         &__close {
             position: absolute;
+            z-index: 999;
             right: 14px;
             top: 14px;
 
