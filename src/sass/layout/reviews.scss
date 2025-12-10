@@ -194,6 +194,11 @@
         position: absolute;
         right: 20px;
         bottom: -60px;
+        @include multi-transition(background-color);
+
+        &:hover {
+            background-color: #88b3b9;
+        }
 
         @media screen and (min-width: getBreakPoint(tablet)) {
             width: 68px;

@@ -125,6 +125,11 @@
             letter-spacing: 0.03em;
             text-transform: uppercase;
             color: get-var(light__third);
+            @include multi-transition(color);
+
+            &:hover {
+                color: #bec7c2;
+            } 
         }
     }
 
@@ -146,24 +151,30 @@
             &__item {
                 width: 32px;
                 height: 32px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 border-radius: 6px;
                 border: 1px solid rgba(246, 245, 239, 0.5);
-                @include multi-transition((border, fill));
+                @include multi-transition(border);
 
                 &:hover {
                     border: 1px solid #a1b5ba;
                 }
 
                 &:hover .footer-social-list__svg {
-                    fill: linear-gradient(107deg, #bec7c2 0%, #a1b5ba 100%);
+                    fill: #a1b5ba;
                 }
+            }
+
+            &__link {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
 
             &__svg {
                 fill: get-var(light__third);
+                @include multi-transition(fill);
             }
 
             &__svg.facebook {
@@ -203,6 +214,11 @@
 
         &__link {
             color: rgba(246, 245, 239, 0.5);
+            @include multi-transition(color);
+
+            &:hover {
+                color: get-var(light__third);
+            }
         }
     }
 }
