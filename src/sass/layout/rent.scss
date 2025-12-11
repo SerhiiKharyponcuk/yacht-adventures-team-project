@@ -194,6 +194,7 @@
         }
 
         &__description {
+            letter-spacing: -0.025em;
             font-size: 14px;
 
             @media screen and (min-width: getBreakPoint(tablet)) {
