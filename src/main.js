@@ -17,3 +17,27 @@ if (document.readyState === 'loading') {
 } else {
     initSlider();
 }
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const boat = document.querySelector(".hero__boat-animated");
+
+  // Список декоративних човнів (1x)
+  const images = [
+    "./images/hero-boat-deco-1.webp",
+    "./images/hero-boat-deco-2.webp",
+    "./images/hero-boat-deco-3.webp"
+  ];
+
+  let index = 0;
+
+  // Функція зміни зображення
+  function changeBoatImage() {
+    index = (index + 1) % images.length;
+    boat.style.backgroundImage = `url(${images[index]})`;
+  }
+
+  // Кожні 18 секунд (під fade-анімацію)
+  setInterval(changeBoatImage, 18000);
+});
