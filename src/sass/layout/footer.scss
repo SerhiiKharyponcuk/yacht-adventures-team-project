@@ -1,11 +1,11 @@
 .footer {
     position: relative;
     padding-top: 40px;
-    margin-bottom: 14px;
+    padding-bottom: 14px;
 
     @media screen and (min-width: getBreakPoint(tablet)) {
         padding-top: 64px;
-        margin-bottom: 16px;
+        padding-bottom: 16px;
     }
 
     &__circle {
@@ -50,18 +50,18 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 33px;
 
         @media screen and (min-width: getBreakPoint(tablet)) {
             flex-direction: row;
             gap: 0;
             flex-wrap: wrap;
             align-items: flex-start;
-            row-gap: 100px;
+            row-gap: 107px;
         }
 
         @media screen and (min-width: getBreakPoint(desktop)) {
-            row-gap: 132px;
+            row-gap: 143px;
         }
     }
 
