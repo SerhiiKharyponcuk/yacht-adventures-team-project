@@ -1,0 +1,138 @@
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  padding-top: 80px;
+}
+
+.hero__inner {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 40px;
+
+  @media (min-width: 768px) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1280px) {
+    gap: 110px;
+  }
+}
+
+/* ============== CONTENT ================= */
+.hero__content {
+  max-width: 520px;
+}
+
+/* ============== VISUAL ================== */
+.hero__visual {
+  position: relative;
+}
+
+/* ============== CARD ==================== */
+.hero-card {
+  position: relative;
+  width: 280px;
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.06);
+
+  @media (min-width: 768px) {
+    width: 340px;
+    padding: 32px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 426px;
+    height: 598px;
+    padding: 40px;
+    background-image: url("../images/ram.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+/* ============ CLIENTS =================== */
+.hero-card__clients {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+}
+
+.hero-card__avatars {
+  display: flex;
+  gap: 8px;
+}
+
+.hero-card__avatar {
+  width: 48px;
+  height: 48px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ============ YACHT IN CARD ============= */
+.hero-card__image {
+  margin: 24px 0;
+  width: 100%;
+  height: 180px;
+  position: relative;
+
+  @media (min-width: 768px) {
+    height: 240px;
+  }
+
+  @media (min-width: 1280px) {
+    height: 280px;
+  }
+}
+
+.hero-card__image-inner {
+  width: 100%;
+  height: 100%;
+  background: url("../images/hero-boat-mobile.webp") center / contain no-repeat;
+  will-change: transform;
+  animation: card-boat-bob 6s ease-in-out infinite;
+
+  @media (min-width: 768px) {
+    background-image: url("../images/hero-boat-tablet.webp");
+  }
+
+  @media (min-width: 1280px) {
+    background-image: url("../images/hero-boat-tablet.webp");
+  }
+}
+
+/* ============ FLOATING BOAT ============= */
+.hero__boat-animated {
+  position: absolute;
+  left: 50%;
+  bottom: -100px;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 140px;
+}
+
+.hero__boat-inner {
+  width: 100%;
+  height: 100%;
+  background: url("../images/hero-boat-deco-mobile.webp") center / contain no-repeat;
+  animation: big-boat-bob 8s ease-in-out infinite;
+}
+
+/* ============ ANIMATIONS ================ */
+@keyframes card-boat-bob {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes big-boat-bob {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
