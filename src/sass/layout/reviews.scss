@@ -1,5 +1,5 @@
 .reviews {
-    margin-bottom: 80px;
+    padding-bottom: 80px;
 
     @media screen and (min-width: getBreakPoint(tablet)) {
         margin-bottom: 100px;
@@ -26,11 +26,11 @@
         font-size: 24px;
         line-height: 120%;
         letter-spacing: -0.04em;
-        margin-bottom: 24px;
+        margin-bottom: 16px;
 
         @media screen and (min-width: getBreakPoint(tablet)) {
             font-size: 32px;
-            margin-bottom: 32px;
+            margin-bottom: 47px;
             width: 456px;
         }
 
