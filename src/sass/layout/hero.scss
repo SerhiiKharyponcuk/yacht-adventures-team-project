@@ -354,7 +354,7 @@
 
 /* декоративний варіант */
 .hero-card__image-inner.is-decor {
-  background-image: url("../../images/yacht.webp");
+  background-image: url("../images/yacht.webp");
   background-size: 300px;
 
   @media screen and (min-width: getBreakPoint(tablet)) {
