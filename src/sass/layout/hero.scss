@@ -1,27 +1,103 @@
 /* ================= HERO ================= */
 .hero {
   position: relative;
-  padding-top: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &__title-dop {
+    padding-left: 20px;
+  }
+
+  &__text {
+    width: 330px;
+    font-family: $family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    color: get-var(light__third);
+    padding-bottom: 16px;
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+      width: 550px;
+      font-family: $family;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: -0.02em;
+      color: get-var(light__third);
+      padding-bottom: 32px;
+    }
+  }
+
+  &__title {
+    width: 305px;
+    font-family: $family;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 110%;
+    letter-spacing: -0.04em;
+    color: get-var(light__third);
+    padding-bottom: 10px;
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+      width: 615px;
+      font-family: $family;
+      font-weight: 500;
+      font-size: 60px;
+      line-height: 110%;
+      letter-spacing: -0.04em;
+      color: get-var(light__third);
+      padding-bottom: 16px;
+    }
+
+    @media screen and (min-width: getBreakPoint(desktop)) {
+      width: 496px;
+    }
+  }
+
+  &__title-accent {
+    background: linear-gradient(107deg, #bec7c2 0%, #a1b5ba 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #a1b5ba;
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+      font-style: italic;
+      background: linear-gradient(107deg, #bec7c2 0%, #a1b5ba 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: #a1b5ba;
+    }
+  }
 }
 
 .hero__inner {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 40px;
+  justify-content: space-between;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: getBreakPoint(desktop)) {
     flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-
-  @media (min-width: 1280px) {
     gap: 110px;
   }
 }
 
 /* ============== CONTENT ================= */
 .hero__content {
-  max-width: 520px;
+  width: 335px;
+  height: 301px;
+
+  @media screen and (min-width: getBreakPoint(tablet)) {
+    width: 704px;
+    height: 294px;
+  }
+
+  @media screen and (min-width: getBreakPoint(desktop)) {
+    width: 554px;
+    height: 360px;
+  }
 }
 
 /* ============== VISUAL ================== */
@@ -32,23 +108,91 @@
 /* ============== CARD ==================== */
 .hero-card {
   position: relative;
-  width: 280px;
+  width: 335px;
+  height: 427px;
   padding: 24px;
   border-radius: 24px;
-  background: rgba(255,255,255,.06);
+  background-image: url("../images/ram.webp");
+  background-size: 335px 427px;
+  background-repeat: no-repeat;
 
-  @media (min-width: 768px) {
-    width: 340px;
-    padding: 32px;
+  &__label {
+    position: relative;
+    top: 55px;
+    font-family: $family;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 110%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: get-var(dark__first);
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+      top: 62px;
+    }
   }
 
-  @media (min-width: 1280px) {
+  &__price {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    gap: 18px;
+    justify-content: space-between;
+    padding-top: 0px;
+    padding-left: 5px;
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+      width: 349px;
+      padding-top: 30px;
+    }
+  }
+
+  &__price-value {
+    font-family: $family;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 110%;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: get-var(dark__first);
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+      font-size: 60px;
+    }
+  }
+
+  &__price-text {
+    padding-top: 14px;
+    font-family: $family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+    letter-spacing: -0.04em;
+    color: get-var(dark__first);
+
+    @media screen and (min-width: getBreakPoint(tablet)) {
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (min-width: getBreakPoint(tablet)) {
+    width: 426px;
+    height: 596px;
+    padding: 32px;
+    background-image: url("../images/ram.webp");
+    background-size: 426px 596px;
+    background-repeat: no-repeat;
+    margin-left: 0;
+  }
+
+  @media screen and (min-width: getBreakPoint(desktop)) {
     width: 426px;
     height: 598px;
-    padding: 40px;
+    padding: 20px;
     background-image: url("../images/ram.webp");
     background-size: cover;
     background-repeat: no-repeat;
+    margin-left: 22px;
   }
 }
 
@@ -57,16 +201,64 @@
   display: flex;
   flex-direction: column-reverse;
   gap: 8px;
+  padding-bottom: 125px;
+
+  @media screen and (min-width: getBreakPoint(tablet)) {
+    padding-bottom: 180px;
+  }
 }
 
 .hero-card__avatars {
   display: flex;
   gap: 8px;
+  position: relative;
 }
 
 .hero-card__avatar {
   width: 48px;
   height: 48px;
+  position: absolute;
+
+  &:nth-child(1) {
+    left: 0;
+    top: 0;
+    z-index: 8;
+  }
+
+  &:nth-child(2) {
+    left: 38px;
+    top: 0;
+    z-index: 7;
+  }
+
+  &:nth-child(3) {
+    left: 78px;
+    top: 0;
+    z-index: 6;
+  }
+
+  @media screen and (min-width: getBreakPoint(tablet)) {
+    width: 56px;
+    height: 56px;
+
+    &:nth-child(1) {
+      left: 0;
+      top: 0;
+      z-index: 8;
+    }
+
+    &:nth-child(2) {
+      left: 43px;
+      top: 0;
+      z-index: 7;
+    }
+
+    &:nth-child(3) {
+      left: 88px;
+      top: 0;
+      z-index: 6;
+    }
+  }
 
   img {
     width: 100%;
@@ -77,32 +269,33 @@
 
 /* ============ YACHT IN CARD ============= */
 .hero-card__image {
-  margin: 24px 0;
   width: 100%;
-  height: 180px;
+  height: 167px;
   position: relative;
+  animation: boat-sway 8.5s ease-in-out infinite;
 
-  @media (min-width: 768px) {
-    height: 240px;
-  }
-
-  @media (min-width: 1280px) {
-    height: 280px;
+  @media screen and (min-width: getBreakPoint(tablet)) {
+    height: 221px;
   }
 }
 
 .hero-card__image-inner {
-  width: 100%;
-  height: 100%;
+  width: 287px;
+  height: 167px;
   background: url("../images/hero-boat-mobile.webp") center / contain no-repeat;
   will-change: transform;
-  animation: card-boat-bob 6s ease-in-out infinite;
+  animation: boat-float 5s ease-in-out infinite;
+  transform-origin: center bottom;
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: getBreakPoint(tablet)) {
+    width: 100%;
+    height: 100%;
     background-image: url("../images/hero-boat-tablet.webp");
   }
 
-  @media (min-width: 1280px) {
+  @media screen and (min-width: getBreakPoint(desktop)) {
+    width: 378px;
+    height: 221px;
     background-image: url("../images/hero-boat-tablet.webp");
   }
 }
@@ -117,22 +310,58 @@
   height: 140px;
 }
 
-.hero__boat-inner {
-  width: 100%;
-  height: 100%;
-  background: url("../images/hero-boat-deco-mobile.webp") center / contain no-repeat;
-  animation: big-boat-bob 8s ease-in-out infinite;
+.hero-photo {
+  position: absolute;
+  left: 215px;
+  top: 32px;
+  width: 133px;
+  height: 133px;
+  background-image: url(../images/hero-person-mobile@2x.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-width: getBreakPoint(tablet)) {
+    left: 325px;
+    top: 32px;
+    width: 233px;
+    height: 233px;
+    background-image: url(../images/hero-person-tablet-desktop@2x.webp);
+  }
 }
 
 /* ============ ANIMATIONS ================ */
-@keyframes card-boat-bob {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-4px); }
-  100% { transform: translateY(0); }
+// @keyframes card-boat-bob { ... }
+// @keyframes big-boat-bob { ... }
+// @keyframes boat-bob-smooth { ... }
+
+@keyframes boat-float {
+  0% { transform: translateY(10); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(10); }
 }
 
-@keyframes big-boat-bob {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
+@keyframes boat-sway {
+  0% { transform: rotate(-8deg); }
+  25% { transform: rotate(0deg); }
+  50% { transform: rotate(-8deg); }
+  75% { transform: rotate(0deg); }
+  100% { transform: rotate(-8deg); }
+}
+
+.hero-card__image-inner {
+  background-image: url("../images/hero-boat-mobile.webp");
+}
+
+/* декоративний варіант */
+.hero-card__image-inner.is-decor {
+  background-image: url("../../images/yacht.webp");
+  background-size: 300px;
+
+  @media screen and (min-width: getBreakPoint(tablet)) {
+    background-size: 380px;
+  }
+}
+
+.hero-card__image-inner {
+  transition: background-image 0.8s ease;
 }
