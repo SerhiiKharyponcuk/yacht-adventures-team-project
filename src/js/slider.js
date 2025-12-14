@@ -82,21 +82,31 @@ export default class ResponsiveSlider {
     this.gap = parseFloat(style.gap) || 0;
 
     const containerWidth = this.slider.offsetWidth;
-    const totalContentWidth =
-      (this.itemWidth + this.gap) * this.items.length - this.gap;
 
-    if (totalContentWidth <= containerWidth + 5) {
+    const MIN_DESKTOP_WIDTH = 1280;
+    const IS_DESKTOP = window.innerWidth >= MIN_DESKTOP_WIDTH;
+
+    let shouldBeInactive = IS_DESKTOP;
+    if (!shouldBeInactive) {
+      const totalContentWidth =
+        (this.itemWidth + this.gap) * this.items.length - this.gap;
+      shouldBeInactive = totalContentWidth <= containerWidth + 5;
+    } 
+    if (shouldBeInactive) {
       this.isActive = false;
       this.sliderList.style.transform = `translateX(0)`;
       this.sliderList.style.cursor = 'default';
       this.togglePaginationVisibility(false);
+      this.currentIndex = 0; 
     } else {
       this.isActive = true;
       this.sliderList.style.cursor = 'grab';
       this.togglePaginationVisibility(true);
 
-      const effectiveItemWidth = this.itemWidth || 1;
-      const visibleItems = Math.floor(containerWidth / effectiveItemWidth);
+      const effectiveItemWidth = this.itemWidth + this.gap;
+      const visibleItems = Math.floor(
+        (containerWidth + this.gap) / effectiveItemWidth
+      );
       const effectiveVisible = visibleItems < 1 ? 1 : visibleItems;
 
       this.maxIndex = this.items.length - effectiveVisible;
@@ -143,11 +153,11 @@ export default class ResponsiveSlider {
   touchStart(event) {
     if (!this.isActive) return;
 
-    cancelAnimationFrame(this.animationID); 
+    cancelAnimationFrame(this.animationID);
 
     this.isDragging = true;
     this.startPos = this.getPositionX(event);
-    this.currentPosition = this.startPos; 
+    this.currentPosition = this.startPos;
     this.sliderList.style.cursor = 'grabbing';
 
     this.prevTranslate = -(this.currentIndex * (this.itemWidth + this.gap));
@@ -168,7 +178,7 @@ export default class ResponsiveSlider {
   }
 
   touchEnd() {
-    if (!this.isDragging) return; 
+    if (!this.isDragging) return;
 
     this.isDragging = false;
     cancelAnimationFrame(this.animationID);
@@ -243,16 +253,12 @@ export default class ResponsiveSlider {
   }
 }
 
-
-
-
-
 (() => {
-  const slider = document.querySelector(".slider");
-  const track = slider.querySelector(".slider__track");
-  const slides = slider.querySelectorAll(".slider__slide");
-  const btnPrev = document.querySelector(".slider-btn--prev");
-  const btnNext = document.querySelector(".slider-btn--next");
+  const slider = document.querySelector('.slider');
+  const track = slider.querySelector('.slider__track');
+  const slides = slider.querySelectorAll('.slider__slide');
+  const btnPrev = document.querySelector('.slider-btn--prev');
+  const btnNext = document.querySelector('.slider-btn--next');
 
   if (!slider || !track || !slides.length) return;
 
@@ -265,8 +271,7 @@ export default class ResponsiveSlider {
     return 1;
   };
 
-  const getSlideWidth = () =>
-    slides[0].offsetWidth + GAP;
+  const getSlideWidth = () => slides[0].offsetWidth + GAP;
 
   const updateSlider = () => {
     const slideWidth = getSlideWidth();
@@ -280,7 +285,7 @@ export default class ResponsiveSlider {
     btnNext.disabled = index >= maxIndex;
   };
 
-  btnNext.addEventListener("click", () => {
+  btnNext.addEventListener('click', () => {
     const maxIndex = slides.length - getSlidesPerView();
     if (index < maxIndex) {
       index++;
@@ -288,14 +293,14 @@ export default class ResponsiveSlider {
     }
   });
 
-  btnPrev.addEventListener("click", () => {
+  btnPrev.addEventListener('click', () => {
     if (index > 0) {
       index--;
       updateSlider();
     }
   });
 
-  window.addEventListener("resize", () => {
+  window.addEventListener('resize', () => {
     const maxIndex = slides.length - getSlidesPerView();
     index = Math.min(index, maxIndex);
     updateSlider();
@@ -303,7 +308,3 @@ export default class ResponsiveSlider {
 
   updateSlider();
 })();
-
-
-
-
