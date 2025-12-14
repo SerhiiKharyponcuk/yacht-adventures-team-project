@@ -1,0 +1,165 @@
+.choose {
+    &__text {
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            display: flex;
+            gap: 302px;
+            margin-bottom: 64px;
+        }
+    }
+
+    &__intro {
+        font-weight: 500;
+        font-size: 24px;
+        margin-bottom: 40px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            font-size: 32px;
+            line-height: 120%;
+            width: 514px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            margin: 0;
+        }
+
+        &--grey {
+            font-style: italic;
+            background: linear-gradient(107deg, #bec7c2 0%, #a1b5ba 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &__features {
+        display: flex;
+        gap: 14px;
+        margin-bottom: 40px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            gap: 32px;
+            margin-left: 304px;
+            margin-bottom: 64px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            margin: 0;
+            width: 400px;
+        }
+    }
+
+    &__list {
+        // height: 220px;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: -0.02em;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            font-size: 16px;
+            // height: 183px;
+        }
+    }
+
+    &__gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 38px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-bottom: 223px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__image img {
+        width: 100%;
+    }
+
+    &__image--large {
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            width: 100%;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            width: 553px;
+        }
+    }
+
+    &__image--middle {
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            width: 308px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            position: absolute;
+            top: 285px;
+            left: 0;
+        }
+    }
+
+    &__image--small {
+        margin-left: 75px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            width: 260px;
+            margin-left: 0px;
+            margin-top: 200px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            margin-top: 0px;
+            margin-right: 292px;
+        }
+    }
+
+    &__cta {
+        position: relative;
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            margin-left: 199px;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        left: 0;
+        top: -153px;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 110%;
+        letter-spacing: -0.04em;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            font-size: 70px;
+            top: -282px;
+        }
+
+        @media screen and (min-width: getBreakPoint(desktop)) {
+            font-size: 100px;
+            width: 882px;
+            top: -372px;
+        }
+    }
+
+    &__btn {
+        width: 134px;
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+            width: 156px;
+            height: 48px;
+            font-size: 18px;
+            line-height: 110%;
+        }
+    }
+
+
+}
