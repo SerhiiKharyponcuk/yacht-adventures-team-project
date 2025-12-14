@@ -136,6 +136,7 @@
   height: 220px;
   object-fit: cover;
   display: block;
+  border-radius: 23px;
 }
 
 .yacht-card__body {
@@ -244,5 +245,74 @@
     position: static;
     margin-top: 24px;
     justify-content: center;
+  }
+}
+
+.yacht-card {
+  width: 354px;
+  height: 508px;
+  background: get-var(main__first);
+  border-radius: 23px;
+  padding: 16px 16px;
+  color: #ffffff;
+
+  // ================= HEADER =================
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    max-width: 70%;
+  }
+
+  &__category {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+    white-space: nowrap;
+  }
+
+  // ================= INFO =================
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+
+    &--price {
+      margin-top: 8px;
+    }
+  }
+
+  &__label {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__value {
+    font-size: 15px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+
+  &__price {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
   }
 }
