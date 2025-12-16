@@ -2,7 +2,7 @@
 .hero {
   position: relative;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 90px;
 
   &__title-dop {
     padding-left: 20px;
@@ -364,4 +364,53 @@
 
 .hero-card__image-inner {
   transition: background-image 0.8s ease;
+}
+
+.hero__circle__svg{
+  position: absolute;
+  top: 500px;
+  left: -20px;
+  width: 314px;
+  height: 314px;
+
+  @media screen and (min-width: getBreakPoint(tablet)) {
+    position: absolute;
+  top: 550px;
+  left: -20px;
+  width: 414px;
+  height: 414px;
+  }
+
+
+@media screen and (min-width: getBreakPoint(desktop)) {
+     position: absolute;
+  top: 240px;
+  left: -20px;
+  width: 414px;
+  height: 414px;
+  }
+}
+
+.hero__circle-dop__svg{
+position: absolute;
+  top: 600px;
+  left: 30px;
+  width: 333px;
+  height: 333px;
+
+  @media screen and (min-width: getBreakPoint(tablet)) {
+  position: absolute;
+  top: 435px;
+  left: -55px;
+  width: 750px;
+  height: 750px;
+  }
+
+  @media screen and (min-width: getBreakPoint(desktop)) {
+   position: absolute;
+  top: 75px;
+  left: -55px;
+  width: 800px;
+  height: 800px;
+  }
 }

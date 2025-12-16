@@ -1,10 +1,15 @@
 .choose {
 
-    .container{
+    .container {
         @media screen and (min-width: getBreakPoint(desktop)) {
             padding: 32px;
         }
     }
+
+    /* ======================================
+     TEXT BLOCK
+  ====================================== */
+
     &__text {
         @media screen and (min-width: getBreakPoint(desktop)) {
             display: flex;
@@ -12,61 +17,64 @@
             margin-bottom: 64px;
         }
     }
-    &__item{
+
+    &__item {
         display: flex;
         width: 155px;
 
-        &:nth-child(2){
+        &:nth-child(2) {
             padding-left: 14px;
             width: 176px;
         }
 
-         @media screen and (min-width: getBreakPoint(tablet)) {
+        @media screen and (min-width: getBreakPoint(tablet)) {
             width: 180px;
 
-            &:nth-child(2){
-            width: 200px;
+            &:nth-child(2) {
+                width: 200px;
+            }
         }
-         }
     }
+
+    /* ======================================
+     INTRO TEXT
+  ====================================== */
 
     &__intro {
         font-family: var(--font-family);
-font-style: italic;
-font-weight: 500;
-font-size: 24px;
-line-height: 120%;
-letter-spacing: -0.04em;
-color: white;
-padding-bottom: 40px;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: -0.04em;
+        color: white;
+        padding-bottom: 40px;
 
         @media screen and (min-width: getBreakPoint(tablet)) {
             font-size: 32px;
-            line-height: 120%;
-            width: 514px;
+            width: 500px;
         }
 
         @media screen and (min-width: getBreakPoint(desktop)) {
             margin: 0;
+            width: 480px;
         }
 
         &--grey {
-font-family: var(--font-family);
-font-style: italic;
-font-weight: 500;
-font-size: 24px;
-line-height: 120%;
-letter-spacing: -0.04em;
-background: linear-gradient(107deg, #bec7c2 0%, #a1b5ba 100%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+            background: linear-gradient(107deg, #bec7c2 0%, #a1b5ba 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
 
- @media screen and (min-width: getBreakPoint(tablet)) {
-            font-size: 32px;
-        }
+            @media screen and (min-width: getBreakPoint(tablet)) {
+                font-size: 32px;
+            }
         }
     }
+
+    /* ======================================
+     FEATURES
+  ====================================== */
 
     &__features {
         display: flex;
@@ -87,16 +95,18 @@ background-clip: text;
 
     &__list {
         display: flex;
-        // height: 220px;
         font-size: 14px;
         line-height: 140%;
         letter-spacing: -0.02em;
 
         @media screen and (min-width: getBreakPoint(tablet)) {
             font-size: 16px;
-            // height: 183px;
         }
     }
+
+    /* ======================================
+     GALLERY
+  ====================================== */
 
     &__gallery {
         display: flex;
@@ -123,10 +133,6 @@ background-clip: text;
     }
 
     &__image--large {
-        @media screen and (min-width: getBreakPoint(tablet)) {
-            width: 100%;
-        }
-
         @media screen and (min-width: getBreakPoint(desktop)) {
             width: 553px;
         }
@@ -149,15 +155,17 @@ background-clip: text;
 
         @media screen and (min-width: getBreakPoint(tablet)) {
             width: 260px;
-            margin-left: 0px;
-            margin-top: 200px;
+            margin: 200px 0 0;
         }
 
         @media screen and (min-width: getBreakPoint(desktop)) {
-            margin-top: 0px;
-            margin-right: 292px;
+            margin: 0 292px 0 0;
         }
     }
+
+    /* ======================================
+     CTA
+  ====================================== */
 
     &__cta {
         position: relative;
@@ -179,6 +187,7 @@ background-clip: text;
         @media screen and (min-width: getBreakPoint(tablet)) {
             font-size: 70px;
             top: -282px;
+            width: 620px;
         }
 
         @media screen and (min-width: getBreakPoint(desktop)) {
@@ -198,6 +207,67 @@ background-clip: text;
             line-height: 110%;
         }
     }
-
-
 }
+
+// SVG CIRCLES
+
+    .choose__circle__svg{
+        width: 250px;
+        height: 250px;
+        z-index: 3;
+        position: absolute;
+        bottom: -1360px;
+        left: -45px;
+
+
+
+          @media screen and (min-width: getBreakPoint(tablet)) {
+            width: 514px;
+        height: 514px;
+        z-index: 2;
+        position: absolute;
+        bottom: -1680px;
+        left: -40px;
+        }
+
+
+         @media screen and (min-width: getBreakPoint(desktop)) {
+        width: 674px;
+        height: 674px;
+        z-index: 2;
+        position: absolute;
+        bottom: -1080px;
+        left: 130px;
+        }
+    }
+
+
+
+    .choose__circle-dop__svg{
+        width: 180px;
+        height: 180px;
+        z-index: 1;
+        position: absolute;
+        bottom: -1324px;
+        left: 130px;
+
+
+
+        @media screen and (min-width: getBreakPoint(tablet)) {
+           width: 514px;
+        height: 514px;
+        z-index: 1;
+        position: absolute;
+        bottom: -1630px;
+        left: 250px;
+        }
+
+         @media screen and (min-width: getBreakPoint(desktop)) {
+         width: 574px;
+        height: 574px;
+        z-index: 3;
+        position: absolute;
+        bottom: -1040px;
+        left: 580px;
+        }
+    }
